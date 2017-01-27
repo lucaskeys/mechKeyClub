@@ -20,4 +20,8 @@ export class MechKeyClubService {
     return this.angularFire.database.object('members/' + memberID);
   }
 
+  addNewMember(newMember: Member) {
+    this.memberList.push(newMember);
+  }
+
 }

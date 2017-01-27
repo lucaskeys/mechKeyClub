@@ -1,0 +1,34 @@
+<h4>New Member Registration</h4>
+<div class="new-member-form">
+  <div>
+    <label>Member Name</label>
+    <input #name>
+  </div>
+  <div>
+    <label>Member Title</label>
+    <input #title>
+  </div>
+  <div>
+    <label class="member-keyboards">Keyboard Collection</label>
+    <br>
+    <sub>Brand</sub>
+    <input #brand>
+    <sub>Model</sub>
+    <input #model>
+    <sub>Switch Type</sub>
+    <input #switch>
+    <sub>Size</sub>
+    <input #size>
+    <sub>Keycap Set</sub>
+    <input #keycap>
+    <button class="btn btn-default" (click)="addKeyboard(brand.value, model.value, switch.value, size.value, keycap.value); brand.value=''; model.value=''; switch.value=''; size.value=''; keycap.value=''; memberTitle.value='';">Add Keyboard</button>
+    <ul *ngFor="let keyboard of keyboards">
+      <li >{{keyboard.brand}}</li>
+      <li >{{keyboard.model}}</li>
+      <li >{{keyboard.switchType}}</li>
+      <li >{{keyboard.size}}</li>
+      <li >{{keyboard.keycapSet}}</li>
+    </ul>
+  </div>
+</div>
+<button class="btn btn-default" (click)="createVenture(ventureName.value, ventureSummary.value, [memberName.value, memberTitle.value], ventureGoal.value, ventureRound.value, ventureEntity.value, ventureTime.value)">Submit New Venture</button>

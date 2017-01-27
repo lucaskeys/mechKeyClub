@@ -1,3 +1,4 @@
-<div *ngFor="let member of members" class="panel panel-default">
+<div *ngFor="let member of members | async" (click)="getMemberProfile(member)" class="panel panel-default">
   <div class="panel-body">
   </div>
+</div>

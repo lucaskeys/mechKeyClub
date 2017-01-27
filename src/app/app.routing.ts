@@ -7,6 +7,7 @@ import { MembersComponent } from './members/members.component';
 import { MemberProfileComponent } from './member-profile/member-profile.component';
 import { NewMemberComponent } from './new-member/new-member.component';
 import { ContactComponent } from './contact/contact.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -22,7 +23,7 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'keyboard-market',
+    path: 'keyboard-marketplace',
     component: KeyboardMarketComponent
   },
   {
@@ -40,6 +41,10 @@ const appRoutes: Routes = [
   {
     path: 'edit-members/:id',
     component: MemberProfileComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 

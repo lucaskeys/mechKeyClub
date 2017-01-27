@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { AdminComponent } from './admin/admin.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -34,7 +35,8 @@ export const firebaseConfig = {
     KeyboardMarketComponent,
     MemberRolesPipe,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
