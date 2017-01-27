@@ -1,0 +1,41 @@
+{ "members": [{
+    "name": "Luke Keysboe",
+    "title": "Founder",
+    "ownedKeyboards": {
+      "brand": "Leopold",
+      "model": "F660M",
+      "switchType": "Topre",
+      "size": 87,
+      "keycapSet": "DSA"
+    },
+    "favoriteKeyboards": {
+      
+    "roundType": "Equity",
+    "daysRemaining": 30,
+    "investorCount": 17
+  }, {
+    "companyName": "Hydro Flask",
+    "companySummary": "Eco-friendly reusable stainless steel bottles.",
+    "team": {
+      "memberName": "Andrew Accuardi",
+      "title": "President"
+    },
+    "fundingGoal": 50000,
+    "roundType": "Equity",
+    "entityType": "LLC",
+    "daysRemaining": 30,
+    "investorCount": 17
+  }, {
+    "companyName": "Bose",
+    "companySummary": "Superior Sound",
+    "team": {
+      "memberName": "Ryan",
+      "title": "President"
+    },
+    "fundingGoal": 120000,
+    "roundType": "Equity",
+    "entityType": "C-Corp",
+    "daysRemaining": 10,
+    "investorCount": 45
+  }]
+}
