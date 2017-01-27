@@ -7,8 +7,17 @@ export class MechKeyClubService {
   memberList: FirebaseListObservable<any[]>;
 
   constructor(private angularFire: AngularFire) {
-    this.memberList = angularFire.database.list('')
+    this.memberList = angularFire.database.list('members');
 
+  }
+
+  retrieveMembers() {
+    return this.memberList;
+  }
+
+
+  getMemberProfile(memberID: string) {
+    return this.angularFire.database.object('members/' + memberID);
   }
 
 }

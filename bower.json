@@ -1,12 +1,12 @@
 {
-  "name": "Mech Key Club",
-  "description": "Club for mechanical keyboard enthusiasts",
+  "name": "mech-key-club",
+  "description": "",
   "main": "",
   "authors": [
     "Luke Keysboe"
   ],
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/lucaskeys/mechKeyClub",
   "ignore": [
     "**/.*",
     "node_modules",
