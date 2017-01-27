@@ -16,6 +16,7 @@ import { ContactComponent } from './contact/contact.component';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AdminComponent } from './admin/admin.component';
+import { CapitalizePipe } from './capitalize.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -36,7 +37,8 @@ export const firebaseConfig = {
     MemberRolesPipe,
     HomeComponent,
     ContactComponent,
-    AdminComponent
+    AdminComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
