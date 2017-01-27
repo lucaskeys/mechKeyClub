@@ -16,7 +16,6 @@ export class MemberProfileComponent implements OnInit {
   memberId: string;
   currentMember;
 
-
   constructor(private route: ActivatedRoute, private location: Location, private memberService: MechKeyClubService) { }
 
   ngOnInit() {

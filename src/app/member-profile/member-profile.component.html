@@ -2,6 +2,11 @@
   <div class="col-lg-12">
     <h2>{{(currentMember | async)?.name}}</h2>
     <h2>{{(currentMember | async)?.title}}</h2>
+    <h2>{{(currentMember | async)?.ownedKeyboards.brand}}</h2>
+    <h2>{{(currentMember | async)?.ownedKeyboards.model}}</h2>
+    <h2>{{(currentMember | async)?.ownedKeyboards.switchType}}</h2>
+    <h2>{{(currentMember | async)?.ownedKeyboards.size}}</h2>
+
     <hr>
   </div>
 </div>

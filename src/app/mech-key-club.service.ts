@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Member } from './member.model';
+import { Keyboard } from './keyboard.model';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Router } from '@angular/router';
 
@@ -27,7 +28,12 @@ export class MechKeyClubService {
   }
 
   redirect() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/members']);
   }
 
+  updateMember(memberUpdate) {
+    var dbMembers = this.getMemberProfile(memberUpdate.$key);
+    dbMembers.update({name: memberUpdate.name, title: memberUpdate.title, ownedKeyboards: {brand: memberUpdate.ownedKeyboards.brand, model: memberUpdate.ownedKeyboards.model, switchType: memberUpdate.ownedKeyboards.switchType, size: memberUpdate.ownedKeyboards.size, keycapSet:
+    memberUpdate.ownedKeyboards.keycapSet}});
+  }
 }

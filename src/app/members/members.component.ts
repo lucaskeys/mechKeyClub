@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Member } from '../member.model';
 import { Router } from '@angular/router';
 import { MechKeyClubService } from  '../mech-key-club.service';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 
 @Component({
@@ -13,6 +13,7 @@ import { MechKeyClubService } from  '../mech-key-club.service';
 })
 export class MembersComponent implements OnInit {
   memberList: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
   constructor(private router: Router, private clubService: MechKeyClubService) { }
 

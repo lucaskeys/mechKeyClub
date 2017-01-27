@@ -11,22 +11,22 @@ import { AngularFire, FirebaseObjectObservable} from 'angularfire2';
   providers: [MechKeyClubService]
 })
 export class AdminComponent implements OnInit {
-  keyboards: Keyboard[] = [];
+  keyboards: Keyboard;
 
   constructor(private newMember: MechKeyClubService) { }
 
   ngOnInit() {
   }
 
-  addKeyboard(brand: string, model: string, switchType: string, size: number, keycapSet: string) {
+  addKeyboard(brand: string, model: string, switchType: string, size: number) {
     if(brand) {
-      var keyboard: Keyboard = new Keyboard(brand, model, switchType, size, keycapSet);
-      this.keyboards.push(keyboard);
+      var newKeyboard: Keyboard = new Keyboard(brand, model, switchType, size);
+      return this.keyboards = newKeyboard;
     }
   }
 
-  createMember(name: string, title: string, keyboardCollection: Keyboard[]) {
-    var member: Member = new Member(name, title, keyboardCollection);
+  createMember(name: string, title: string, mechKeys: Keyboard) {
+    var member: Member = new Member(name, title, mechKeys);
     member.ownedKeyboards = this.keyboards;
     this.newMember.addNewMember(member);
   }

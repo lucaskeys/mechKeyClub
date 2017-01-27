@@ -39,7 +39,7 @@ const appRoutes: Routes = [
     component: NewMemberComponent
   },
   {
-    path: 'edit-members/:id',
+    path: 'members/:id',
     component: MemberProfileComponent
   },
   {

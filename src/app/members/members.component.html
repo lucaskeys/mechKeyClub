@@ -1,4 +1,8 @@
-<div *ngFor="let member of members | async" (click)="getMemberProfile(member)" class="panel panel-default">
+<h2>Our Members</h2>
+<div *ngFor="let member of memberList | async" class="panel panel-default">
   <div class="panel-body">
+    <h3 (click)="memberDetails(member)">{{member.name}}</h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <app-edit-members [currentMember]="member"></app-edit-members>
   </div>
 </div>
