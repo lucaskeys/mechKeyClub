@@ -17,7 +17,11 @@ export class MembersComponent implements OnInit {
   constructor(private router: Router, private clubService: MechKeyClubService) { }
 
   ngOnInit() {
-    // this.memberList = this.clubService.getClubMembers();
+    this.memberList = this.clubService.retrieveMembers();
+  }
+
+  memberDetails(member) {
+    this.router.navigate(['members', member.$key]);
   }
 
 }
