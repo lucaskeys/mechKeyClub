@@ -6,11 +6,16 @@ import { KeyboardMarketComponent } from './keyboard-market/keyboard-market.compo
 import { MembersComponent } from './members/members.component';
 import { MemberProfileComponent } from './member-profile/member-profile.component';
 import { NewMemberComponent } from './new-member/new-member.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   },
   {
     path: 'about',
@@ -25,7 +30,7 @@ const appRoutes: Routes = [
     component: MembersComponent
   },
   {
-    path: 'new-member',
+    path: 'signup',
     component: NewMemberComponent
   },
   {
