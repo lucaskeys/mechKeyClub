@@ -36,4 +36,9 @@ export class MechKeyClubService {
     dbMembers.update({name: memberUpdate.name, title: memberUpdate.title, ownedKeyboards: {brand: memberUpdate.ownedKeyboards.brand, model: memberUpdate.ownedKeyboards.model, switchType: memberUpdate.ownedKeyboards.switchType, size: memberUpdate.ownedKeyboards.size, keycapSet:
     memberUpdate.ownedKeyboards.keycapSet}});
   }
+
+  remove(deleteMember) {
+    var memberDB = this.getMemberProfile(deleteMember.$key);
+    memberDB.remove();
+  }
 }
