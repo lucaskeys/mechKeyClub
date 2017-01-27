@@ -11,6 +11,7 @@ import { NewMemberComponent } from './new-member/new-member.component';
 import { EditMembersComponent } from './edit-members/edit-members.component';
 import { KeyboardMarketComponent } from './keyboard-market/keyboard-market.component';
 import { MemberRolesPipe } from './member-roles.pipe';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MemberRolesPipe } from './member-roles.pipe';
     NewMemberComponent,
     EditMembersComponent,
     KeyboardMarketComponent,
-    MemberRolesPipe
+    MemberRolesPipe,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
