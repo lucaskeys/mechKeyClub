@@ -1,0 +1,17 @@
+{
+  "name": "Mech Key Club",
+  "description": "Club for mechanical keyboard enthusiasts",
+  "main": "",
+  "authors": [
+    "Luke Keysboe"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
