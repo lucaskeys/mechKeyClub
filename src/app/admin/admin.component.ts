@@ -3,12 +3,13 @@ import { MechKeyClubService } from '../mech-key-club.service';
 import { Member } from '../member.model';
 import { Keyboard } from '../keyboard.model';
 import { AngularFire, FirebaseObjectObservable} from 'angularfire2';
+import { CapitalizePipe } from '../capitalize.pipe';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css'],
-  providers: [MechKeyClubService]
+  providers: [MechKeyClubService],
 })
 export class AdminComponent implements OnInit {
   keyboards: Keyboard;

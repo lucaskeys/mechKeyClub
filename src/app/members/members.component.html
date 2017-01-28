@@ -10,7 +10,8 @@
 <h2>Our Members</h2>
 <div *ngFor="let member of memberList | async | memberRoles: filterByTitle" class="panel panel-default">
   <div class="panel-body">
-    <h3 (click)="memberDetails(member)">{{member.name}}</h3>
+    <h3 (click)="memberDetails(member)">Member Name: {{member.name}}</h3>
+    <h4>Member Title: {{member.title}}</h4>
     <div *ngIf="currentRoute === '/admin'">
       <app-edit-members [currentMember]="member"></app-edit-members>
   </div>

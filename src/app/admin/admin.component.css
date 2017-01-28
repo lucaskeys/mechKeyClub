@@ -1,0 +1,12 @@
+input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+button {
+  margin: 10px;
+}
+
+.members {
+  margin-top: 20px;
+}

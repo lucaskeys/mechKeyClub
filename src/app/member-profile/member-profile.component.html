@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-lg-12">
-    <h2>{{(currentMember | async)?.name}}</h2>
-    <h2>{{(currentMember | async)?.title}}</h2>
-    <h2>{{(currentMember | async)?.ownedKeyboards.brand}}</h2>
-    <h2>{{(currentMember | async)?.ownedKeyboards.model}}</h2>
-    <h2>{{(currentMember | async)?.ownedKeyboards.switchType}}</h2>
-    <h2>{{(currentMember | async)?.ownedKeyboards.size}}</h2>
-
-    <hr>
+    <h2>Name: {{(currentMember | async)?.name}}</h2>
+    <h4>Title: {{(currentMember | async)?.title}}</h4>
+    <ul>
+      <li><h4>Keyboard Brand: {{(currentMember | async)?.ownedKeyboards.brand}}</h4></li>
+      <li><h4>Model: {{(currentMember | async)?.ownedKeyboards.model}}</h4></li>
+      <li><h4>Switch Type: {{(currentMember | async)?.ownedKeyboards.switchType}}</h4></li>
+      <li><h4>Size: {{(currentMember | async)?.ownedKeyboards.size}}</h4></li>
+    </ul>
   </div>
 </div>
