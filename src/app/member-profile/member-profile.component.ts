@@ -4,7 +4,8 @@ import { Keyboard } from '../keyboard.model';
 import { MechKeyClubService } from '../mech-key-club.service';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Params } from '@angular/router';
-import { FirebaseObjectObservable } from 'angularfire2';
+import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
+import { KeyboardValuesPipe } from '../keyboard-values.pipe';
 
 @Component({
   selector: 'app-member-profile',
@@ -15,14 +16,22 @@ import { FirebaseObjectObservable } from 'angularfire2';
 export class MemberProfileComponent implements OnInit {
   memberId: string;
   currentMember;
+  memberKeyboards: Object[] = [];
 
-  constructor(private route: ActivatedRoute, private location: Location, private memberService: MechKeyClubService) { }
 
+  constructor(private af: AngularFire, private route: ActivatedRoute, private location: Location, private memberService: MechKeyClubService) {}
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.memberId = (urlParameters['id']);
     });
-    this.currentMember = this.memberService.getMemberProfile(this.memberId);
+    this.currentMember = this.memberService.getMemberProfile(this.memberId).subscribe(dataFromObserver => {
+    this.currentMember = dataFromObserver;
+    var userKeyboards = this.currentMember.ownedKeyboards;
+      for(var i = 0; i < userKeyboards.length; i++) {
+          this.memberKeyboards.push(userKeyboards[i]);
+        }
+        console.log(this.memberKeyboards);
+    });
   }
 
 }

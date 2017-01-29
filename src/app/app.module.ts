@@ -17,6 +17,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AdminComponent } from './admin/admin.component';
 import { CapitalizePipe } from './capitalize.pipe';
+import { KeyboardValuesPipe } from './keyboard-values.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -38,7 +39,8 @@ export const firebaseConfig = {
     HomeComponent,
     ContactComponent,
     AdminComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    KeyboardValuesPipe
   ],
   imports: [
     BrowserModule,

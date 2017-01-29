@@ -12,21 +12,21 @@ import { CapitalizePipe } from '../capitalize.pipe';
   providers: [MechKeyClubService],
 })
 export class AdminComponent implements OnInit {
-  keyboards: Keyboard;
+  keyboards: Keyboard[] = [];
 
   constructor(private newMember: MechKeyClubService) { }
 
   ngOnInit() {
   }
 
-  addKeyboard(brand: string, model: string, switchType: string, size: number) {
+  addKeyboard(brand: string, model: string, switchType: string, size: number, keycaps: string) {
     if(brand) {
-      var newKeyboard: Keyboard = new Keyboard(brand, model, switchType, size);
-      return this.keyboards = newKeyboard;
+      var newKeyboard: Keyboard = new Keyboard(brand, model, switchType, size, keycaps);
+      this.keyboards.push(newKeyboard);
     }
   }
 
-  createMember(name: string, title: string, mechKeys: Keyboard) {
+  createMember(name: string, title: string, mechKeys: Keyboard[]) {
     var member: Member = new Member(name, title, mechKeys);
     member.ownedKeyboards = this.keyboards;
     this.newMember.addNewMember(member);

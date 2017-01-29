@@ -20,11 +20,20 @@
       <input #switch>
       <sub>Size</sub>
       <input #size>
+      <sub>Keycap Set</sub>
+      <input #keycaps>
     </div>
-    <button class="btn btn-success" (click)="addKeyboard(brand.value, model.value, switch.value, size.value)">Add Keyboard</button>
+    <button class="btn btn-success" (click)="addKeyboard(brand.value, model.value, switch.value, size.value, keycaps.value)">Add Keyboard</button>
+    <ul *ngFor="let keyboard of keyboards">
+      <li>Brand: {{keyboard.brand}}</li>
+      <li>Model: {{keyboard.model}}</li>
+      <li>Switch  Type: {{keyboard.switchType}}</li>
+      <li>Size: {{keyboard.size}}</li>
+      <li>Keycap Set: {{keyboard.keycaps}}</li>
+    </ul>
   </div>
 </div>
-<button class="btn btn-default" (click)="createMember(name.value, title.value)">Add Member to club </button>
+<button class="btn btn-default" (click)="createMember(name.value, title.value, [brand.value, model.value, switch.value, size.value, keycaps.value])">Add Member to club </button>
 
 <div class="members">
   <app-members></app-members>
