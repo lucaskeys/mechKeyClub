@@ -2,6 +2,17 @@ li {
   list-style: none;
 }
 
-h4 {
-  margin-top: 20px;
+.row {
+  margin-top: 100px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 30px;
+  color: white;
+  position: inherit;
+  padding-top: 80px;
+}
+
+.member-keyboards {
+  margin-top: 25px;
+  margin-left: -20px;
+  font-size: 20px;
 }

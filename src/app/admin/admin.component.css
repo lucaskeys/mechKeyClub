@@ -1,12 +1,47 @@
-input {
+.top-sec input {
   width: 100%;
   margin-bottom: 15px;
 }
 
-button {
-  margin: 10px;
+.members {
+  margin-top: -80px;
+  margin-bottom: 30px;
+  margin-left: -15px;
 }
 
-.members {
+button {
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.new-member-form {
+  margin-top: 100px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.member-keyboards input, .member-keyboards label  {
+  width: 400px;
+  height: 30px;
+  display: block;
+}
+
+.row {
+  margin-top: 40px;
+}
+
+label, sub {
+  color: white;
+}
+
+.key-collection {
+  list-style-type: none;
+  color: white;
+}
+
+.btn-info {
+  color: black;
+  font-family: 'Kanit', sans-serif;
 }

@@ -31,10 +31,9 @@ export class MechKeyClubService {
   }
 
   updateMember(memberUpdate) {
-    var dbMembers = this.getMemberProfile(memberUpdate.$key);
-    dbMembers.update({name: memberUpdate.name, title: memberUpdate.title, ownedKeyboards: {brand: memberUpdate.ownedKeyboards.brand, model: memberUpdate.ownedKeyboards.model, switchType: memberUpdate.ownedKeyboards.switchType, size: memberUpdate.ownedKeyboards.size, keycapSet:
-    memberUpdate.ownedKeyboards.keycapSet}});
-  }
+   var dbMembers = this.getMemberProfile(memberUpdate.$key);
+   dbMembers.update({name: memberUpdate.name, title: memberUpdate.title, ownedKeyboards: {brand: memberUpdate.ownedKeyboards.brand, model: memberUpdate.ownedKeyboards.model, size: memberUpdate.ownedKeyboards.size, switchType: memberUpdate.ownedKeyboards.switchType}});
+ }
 
   remove(deleteMember) {
     var memberDB = this.getMemberProfile(deleteMember.$key);

@@ -4,10 +4,40 @@ ul {
 
 li {
   text-align: center;
+  font-family: 'Permanent Marker', sans-serif;
   margin-bottom: 20px;
+
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 90px;
+  padding-top: 50px;
+  margin-top: 80px;
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  background-color: transparent;
+  width: 500px;
+  height: 80px;
+  border-radius: 12px;
+  border: solid 4px #00E5FF;
+}
+
+
+li .btn {
+  margin-top: 40px;
+  color: white;
+  font-size: 35px;
+}
+
+.btn:hover {
+  background-color: #00E5FF;
+
 }

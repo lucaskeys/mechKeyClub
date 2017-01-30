@@ -1,25 +1,27 @@
-<h4>Edit Current Members</h4>
-<div class="edit-form">
-  <div>
-    <label>Member Name</label>
-    <input [(ngModel)]="currentMember.name">
-  </div>
-  <div>
-    <label>Member Title</label>
-    <input [(ngModel)]="currentMember.title">
-  </div>
-  <div>
-    <label class="member-keyboards">Keyboard Collection</label>
-    <br>
-    <sub>Brand</sub>
-    <input [(ngModel)]="currentMember.ownedKeyboards.brand">
-    <sub>Model</sub>
-    <input [(ngModel)]="currentMember.ownedKeyboards.model">
-    <sub>Switch Type</sub>
-    <input [(ngModel)]="currentMember.ownedKeyboards.switchType">
-    <sub>Size</sub>
-    <input [(ngModel)]="currentMember.ownedKeyboards.size">
-    <button (click)="dbUpdateMember(currentMember)">Update</button>
-    <button (click)="deleteMember(currentMember)">Delete</button>
+<div class="edit-member">
+  <h4>Edit Current Members</h4>
+  <div class="edit-form">
+    <div>
+      <label>Member Name</label>
+      <input [(ngModel)]="currentMember.name">
+    </div>
+    <div>
+      <label>Member Title</label>
+      <input [(ngModel)]="currentMember.title">
+    </div>
+    <div>
+      <label class="member-keyboards">Keyboard Collection</label>
+      <br>
+      <sub>Brand</sub>
+      <input [(ngModel)]="currentMember.ownedKeyboards.brand">
+      <sub>Model</sub>
+      <input [(ngModel)]="currentMember.ownedKeyboards.model">
+      <sub>Switch Type</sub>
+      <input [(ngModel)]="currentMember.ownedKeyboards.switchType">
+      <sub>Size</sub>
+      <input [(ngModel)]="currentMember.ownedKeyboards.size">
+      <button class="btn btn-warning" (click)="dbUpdateMember(currentMember)">Update</button>
+      <button class="btn btn-danger" (click)="deleteMember(currentMember)">Delete</button>
+    </div>
   </div>
 </div>

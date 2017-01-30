@@ -19,9 +19,9 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
-  addKeyboard(brand: string, model: string, switchType: string, size: number, keycaps: string) {
+  addKeyboard(brand: string, model: string, switchType: string, size: number) {
     if(brand) {
-      var newKeyboard: Keyboard = new Keyboard(brand, model, switchType, size, keycaps);
+      var newKeyboard: Keyboard = new Keyboard(brand, model, switchType, size);
       this.keyboards.push(newKeyboard);
     }
   }

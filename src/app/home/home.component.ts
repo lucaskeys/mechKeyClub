@@ -6,5 +6,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-title = 'Mech Key Club';
+title = 'MECH KEY CLUB';
 }

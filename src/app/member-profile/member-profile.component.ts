@@ -15,8 +15,8 @@ import { KeyboardValuesPipe } from '../keyboard-values.pipe';
 })
 export class MemberProfileComponent implements OnInit {
   memberId: string;
-  currentMember;
-  memberKeyboards: Object[] = [];
+  currentMember: Member;
+  memberKeyboards: Keyboard[] = [];
 
 
   constructor(private af: AngularFire, private route: ActivatedRoute, private location: Location, private memberService: MechKeyClubService) {}
@@ -24,14 +24,16 @@ export class MemberProfileComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.memberId = (urlParameters['id']);
     });
-    this.currentMember = this.memberService.getMemberProfile(this.memberId).subscribe(dataFromObserver => {
-    this.currentMember = dataFromObserver;
+    this.memberService.getMemberProfile(this.memberId).subscribe(dataFromObserver => {
+      this.currentMember = new Member(dataFromObserver.name, dataFromObserver.title, dataFromObserver.ownedKeyboards)
+    // this.currentMember = dataFromObserver;
     var userKeyboards = this.currentMember.ownedKeyboards;
       for(var i = 0; i < userKeyboards.length; i++) {
           this.memberKeyboards.push(userKeyboards[i]);
         }
         console.log(this.memberKeyboards);
+        console.log(this.currentMember);
+        this.currentMember.joinDate.getDay();
     });
   }
-
 }

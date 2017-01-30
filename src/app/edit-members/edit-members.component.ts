@@ -12,7 +12,6 @@ import { MechKeyClubService } from '../mech-key-club.service';
 export class EditMembersComponent implements OnInit {
   @Input() currentMember;
   constructor(private memberService: MechKeyClubService) { }
-
   ngOnInit() {
   }
 
@@ -20,6 +19,9 @@ export class EditMembersComponent implements OnInit {
      if(confirm("Are you sure you want to delete this item from the database?")){
        this.memberService.remove(member);
      }
+   }
+   dbUpdateMember(memberToUpdate) {
+     this.memberService.updateMember(memberToUpdate);
    }
 
 }

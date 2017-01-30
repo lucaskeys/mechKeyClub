@@ -1,13 +1,13 @@
 <div class="row">
-  <div class="col-lg-12">
+  <div class="top col-lg-12">
     <h2>Name: {{currentMember?.name}}</h2>
-    <h4>Title: {{currentMember?.title}}</h4>
+    <h2>Title: {{currentMember?.title}}</h2>
+    <h2>Your Keyboards</h2>
   </div>
-  <ul *ngFor="let keyboard of memberKeyboards">
-    <li><h4>Brand: {{keyboard?.brand}}</h4></li>
+  <ul class="member-keyboards" *ngFor="let keyboard of memberKeyboards">
+    <li>Brand: {{keyboard?.brand}}</li>
     <li>Model: {{keyboard?.model}}</li>
     <li>Switch Type: {{keyboard?.switchType}}</li>
     <li>Size: {{keyboard?.size}}</li>
   </ul>
-  <hr>
 </div>

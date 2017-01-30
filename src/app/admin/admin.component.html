@@ -1,40 +1,49 @@
-<h4>New Member Registration</h4>
+<h4 class="title">New Member Registration</h4>
 <div class="new-member-form">
-  <div>
-    <label>Member Name</label>
-    <input #name>
-  </div>
-  <div>
-    <label>Member Title</label>
-    <input #title>
-  </div>
-  <div>
-    <label class="member-keyboards">Keyboard Collection</label>
-    <br>
-    <div class="member-keyboards">
-      <sub>Brand</sub>
-      <input #brand>
-      <sub>Model</sub>
-      <input #model>
-      <sub>Switch Type</sub>
-      <input #switch>
-      <sub>Size</sub>
-      <input #size>
-      <sub>Keycap Set</sub>
-      <input #keycaps>
+  <div class="top-sec">
+    <div>
+      <label>Member Name</label>
+      <input #name>
     </div>
-    <button class="btn btn-success" (click)="addKeyboard(brand.value, model.value, switch.value, size.value, keycaps.value)">Add Keyboard</button>
-    <ul *ngFor="let keyboard of keyboards">
-      <li>Brand: {{keyboard.brand}}</li>
-      <li>Model: {{keyboard.model}}</li>
-      <li>Switch  Type: {{keyboard.switchType}}</li>
-      <li>Size: {{keyboard.size}}</li>
-      <li>Keycap Set: {{keyboard.keycaps}}</li>
-    </ul>
+    <div>
+      <label>Member Title</label>
+      <input #title>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="member-keyboards">
+        <label>Keyboard Collection</label>
+        <div class="member-keyboards">
+          <sub>Brand</sub>
+          <input #brand>
+          <br>
+          <sub>Model</sub>
+          <input #model>
+          <br>
+          <sub>Switch Type</sub>
+          <input #switch>
+          <br>
+          <sub>Size</sub>
+          <input #size>
+          <br>
+        </div>
+        <button class="btn btn-danger" (click)="addKeyboard(brand.value, model.value, switch.value, size.value)">Add Keyboard</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label>Your Keyboards:</label>
+      <ul class="key-collection" *ngFor="let keyboard of keyboards">
+        <li><h3>Brand: {{keyboard.brand}}</h3></li>
+        <li><h3>Model: {{keyboard.model}}</h3></li>
+        <li>Switch  Type: {{keyboard.switchType}}</li>
+        <li>Size: {{keyboard.size}}</li>
+      </ul>
   </div>
 </div>
-<button class="btn btn-default" (click)="createMember(name.value, title.value, [brand.value, model.value, switch.value, size.value, keycaps.value])">Add Member to club </button>
-
+</div>
+<hr>
+<button class="btn btn-info" (click)="createMember(name.value, title.value, [brand.value, model.value, switch.value, size.value])">Add Member to club </button>
 <div class="members">
   <app-members></app-members>
 </div>

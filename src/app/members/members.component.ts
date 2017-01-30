@@ -16,11 +16,23 @@ export class MembersComponent implements OnInit {
   memberList: FirebaseListObservable<any[]>;
   filterByTitle: string = "all"
   currentRoute: string = this.router.url;
+  currentMember: any[] = []
+  thisMember: Member[];
 
   constructor(private router: Router, private clubService: MechKeyClubService) { }
 
   ngOnInit() {
     this.memberList = this.clubService.retrieveMembers();
+
+    // this.memberList.forEach(member => {
+    //   this.thisMember.push(member);
+    //   for(var i = 0; i < this.currentMember.length; i++) {
+    //     this.currentMember[i].push(subscribe(observer => {
+    //       this.thisMember = new Member(observer.name, observer.title, observer.ownedKeyboards)
+    //       console.log(this.thisMember);
+    //     });
+    //   }
+    // });
   }
 
   memberDetails(member) {

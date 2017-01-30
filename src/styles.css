@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
 input {
   width: 100%;
+}
+
+#body {
+  background-image: url("mechBack.jpg");
+  background-position: 30% 20%;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
