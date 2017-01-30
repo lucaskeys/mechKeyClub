@@ -23,16 +23,10 @@ export class MembersComponent implements OnInit {
 
   ngOnInit() {
     this.memberList = this.clubService.retrieveMembers();
-
-    // this.memberList.forEach(member => {
-    //   this.thisMember.push(member);
-    //   for(var i = 0; i < this.currentMember.length; i++) {
-    //     this.currentMember[i].push(subscribe(observer => {
-    //       this.thisMember = new Member(observer.name, observer.title, observer.ownedKeyboards)
-    //       console.log(this.thisMember);
-    //     });
-    //   }
-    // });
+    // 
+    // this.memberList.subscribe(member => {
+    //   var memberKeyboard = new Keyboard(keyboard.)
+    //   })
   }
 
   memberDetails(member) {

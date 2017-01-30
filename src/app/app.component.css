@@ -15,11 +15,12 @@ header .navbar {
 li, .navbar-brand {
   padding-right: 15px;
   font-size: 20px;
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Kanit', sans-serif
 }
 
 li {
   padding-left: 15px;
+  color: black;
 }
 
 .navbar-brand {
